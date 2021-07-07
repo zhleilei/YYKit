@@ -703,6 +703,7 @@ dispatch_semaphore_signal(_lock);
                     font = [uiFont CTFontRef];
                     if (font) {
                         attrs[(id)kCTFontAttributeName] = (__bridge id)(font);
+                        [attrs removeObjectForKey:YYTextAttachmentAttributeName];
                         uiFont = nil;
                         CFRelease(font);
                     }
